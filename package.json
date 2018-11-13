@@ -1,13 +1,19 @@
 {
   "name": "bs-generators",
+  "description": "BuckleScript bindings to JavaScripts Generator objects",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "prepack": "bsb -clean-world",
+    "format": "bsrefmt --in-place **/*.re",
+    "test": "exit 0"
   },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript",
+    "generator",
+    "iterator"
   ],
   "author": "Matthew Scharley <matt@scharley.me>",
   "license": "MIT",
