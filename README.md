@@ -34,13 +34,15 @@ yarn add bs-generators
 
 ## Usage
 
+The best API documentation so far is [the interface file](https://github.com/mscharley/bs-generators/blob/master/src/JsGenerator.rei).
+
 ### Using a function* defined in JavaScript and provided to your Reason code
 
 ```reason
 open JsGenerator;
 
 /* Create a generator - pretend this comes from the outside */
-let jsGen: JsGenerator.fn(int) = [%raw "function *() { yield 1; yield 2; yield 3 }"];
+let jsGen: JsGenerator.jsFn(int) = [%raw "function *() { yield 1; yield 2; yield 3 }"];
 let gen = jsGen();
 
 /* Iterate over the generator and stop when doneGet returns true */

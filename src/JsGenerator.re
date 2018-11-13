@@ -18,6 +18,7 @@ type t('a) = {
 
 type fn('a) = unit => t('a);
 type fn1('a, 'b) = 'a => t('b);
+type jsFn('a) = (. unit) => t('a);
 
 [@bs.send] external next: (t('a), unit) => value('a) = "";
 [@bs.send] external return: (t('a), Js.Undefined.t('a)) => value('a) = "";
