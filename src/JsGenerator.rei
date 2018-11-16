@@ -3,12 +3,12 @@ type t('a);
 /* Abstract type referencing a single value returned by an interator */
 type value('a);
 
+/* BuckleScript compat. If JavaScript gives you a zero-argument function, this is what you want to use. */
+/* @see https://bucklescript.github.io/docs/en/function.html#solution-guaranteed-uncurrying */
+type fnU('a) = (. unit) => t('a);
 /* jsFn(int) is the type of the following javascript: function* () { yield 1; } */
 type fn('a) = unit => t('a);
 type fn1('a, 'b) = 'a => t('b);
-/* BuckleScript compat. If JavaScript gives you a zero-argument function, this is what you want to use. */
-/* @see https://bucklescript.github.io/docs/en/function.html#solution-guaranteed-uncurrying */
-type jsFn('a) = (. unit) => t('a);
 
 /* Check from the returned value if the iterator is complete */
 let doneGet: value('a) => bool;

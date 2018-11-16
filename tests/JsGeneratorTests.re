@@ -1,7 +1,7 @@
 open JsGenerator;
 
 /* Create a generator - pretend this comes from the outside */
-let jsGen: JsGenerator.jsFn(int) = [%raw "function *() { yield 1; yield 2; yield 3 }"];
+let jsGen: JsGenerator.fnU(int) = [%raw "function *() { yield 1; yield 2; yield 3 }"];
 let gen = jsGen(.);
 
 /* Iterate over the generator and stop when doneGet returns true */
