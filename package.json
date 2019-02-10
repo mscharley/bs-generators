@@ -18,6 +18,7 @@
   "author": "Matthew Scharley <matt@scharley.me>",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^4.0.7"
+    "bs-platform": "^4.0.7",
+    "semantic-release": "^15.13.3"
   }
 }
