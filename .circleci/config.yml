@@ -1,0 +1,33 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/bs-generators
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: npm test
+  deploy:
+    working_directory: ~/bs-generators
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run semantic-release
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - build
+      - deploy:
+          context: semantic-release
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
