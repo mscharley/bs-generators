@@ -1,6 +1,7 @@
 # bs-generators
 
-[![npm](https://img.shields.io/npm/v/bs-generators.svg)](https://www.npmjs.com/package/bs-generators)
+[![npm](https://img.shields.io/npm/v/bs-generators.svg)](https://www.npmjs.com/package/bs-generators) 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mscharley/bs-generators.svg)](https://greenkeeper.io/)
 
 **Source:** [https://github.com/mscharley/bs-generators](https://github.com/mscharley/bs-generators)  
 **Author:** Matthew Scharley  
